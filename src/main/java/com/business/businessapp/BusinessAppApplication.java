@@ -8,7 +8,7 @@ public class BusinessAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BusinessAppApplication.class, args);
-		System.out.print(true);
+		System.out.print(false);
 		
 	}
 
