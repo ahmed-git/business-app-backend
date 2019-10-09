@@ -34,7 +34,7 @@ public class AccountantController {
 		return accountantRepository.findById(id).get();
 	}
 	
-	@PostMapping("/update") 
+	@PostMapping("/{id}") 
 	public void save(@RequestBody Accountant accountant) {
 		Company company = new Company();
 		company.setId(accountant.getCompany().getId());

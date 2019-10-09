@@ -22,9 +22,9 @@ public class TransactionController {
 	@Autowired
 	private TransactionRepository transactionRepository;
 	
-	@GetMapping("/account/{id}")
-	public List<TransactionAccountResponse> getTransactions(@PathVariable Long id) {
-		return transactionRepository.findAllByAccountId(id);
+	@GetMapping("/account/{accountId}")
+	public List<TransactionAccountResponse> getTransactionsForAccount(@PathVariable Long accountId) {
+		return transactionRepository.findAllByAccountId(accountId);
 	}
 	
 	@GetMapping("/all/{status}")

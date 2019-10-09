@@ -34,7 +34,7 @@ public class ManagerController {
 		return managerRepository.findById(id).get();
 	}
 	
-	@PostMapping("/update")
+	@PostMapping("/{id}")
 	public void save(@RequestBody Manager manager) {
 		Company company = new Company();
 		company.setId(manager.getCompany().getId());

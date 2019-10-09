@@ -21,7 +21,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 	public List<TransactionAccountResponse> findAllByAccountId(@Param("id") Long id);
 	
 	
-	@Query("SELECT t FROM Transaction t where t.status = :status")
 	public List<Transaction> findAllByStatus(@Param("status") TransactionStatus status);
 	
 }
